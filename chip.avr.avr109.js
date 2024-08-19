@@ -55,7 +55,7 @@ out.Flasher.prototype = {
       var cmd = that.cmds.shift();
 
       if (cmd) {
-        running = true;
+        that.running = true;
         that.options.debug && process.stdout.write('Send: ' + cmd.value);
         var response = new Buffer(0);
         var onData = function(d) {
